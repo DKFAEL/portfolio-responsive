@@ -442,7 +442,7 @@
                     <div class="col-md-7 mt-5 mt-md-0">
                         <div class="card p-5 h-100 shadow border-0" data-anime="left">
 
-                            <form class="row g-3" action='/send' method="POST">
+                            <form class="row g-3" action='https://formsubmit.co/rafadevxp@gmail.com' method="POST">
                                 <div class="col-md-6">
                                     <label for="nome" class="form-label">Nome:</label>
                                     <input type="text" class="form-control" id="nome" name='nome'
@@ -460,9 +460,13 @@
                                         placeholder="Digite sua mensagem" required></textarea>
                                 </div>
 
+                                <input type="hidden" name="_captcha" value="false" />
+
+                                <input type="hidden" name="_next"  value="http://localhost:5500/obrigado.html"/>
+
 
                                 <div class="col-12 d-flex justify-content-center mt-4">
-                                    <button id='btn-enviar' type="submit" class="btn btn-primary">Enviar
+                                    <button id='submit' type="submit" class="btn btn-primary">Enviar
                                         mensagem</button>
 
                                     <button id='btn-enviar-loader' class="btn btn-primary" type="button" disabled>
@@ -481,7 +485,7 @@
 
         </section>
 
-        {% with messages = get_flashed_messages() %}
+        <!--    {% with messages = get_flashed_messages() %}
         {% if messages %}
         {% for message in messages %}
         <div id="alerta" class="alert alert-success alert-dismissible fade show" role="alert">
@@ -490,7 +494,7 @@
           </div>
           {% endfor %} 
           {% endif %}
-          {% endwith %}
+          {% endwith %}    -->
 
     </main>
 
